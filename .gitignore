@@ -1,0 +1,75 @@
+# Visual Studio
+*.sln
+*.vcxproj*
+*.user
+*.obj
+*.pdb
+*.ipch
+*.db
+*.suo
+*.log
+*.tlog
+*.idb
+*.aps
+*.ncb
+*.opendb
+*.VC.db
+*.VC.opendb
+build/
+out/
+bin/
+*.exe
+*.dll
+*.lib
+*.exp
+*.ilk
+*.pch
+*.res
+*.sbr
+*.bsc
+*.map
+*.cod
+*.i
+*.s
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CMakeSettings.json
+
+# Debug/Release folders
+Debug/
+Release/
+x64/
+x86/
+.vs/
+
+# SQLite database files
+*.sqlite
+*.sqlite3
+*.db3
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE specific
+.vscode/
+*.swp
+*.swo
+
+# Package managers
+vcpkg_installed/
+packages/ 
