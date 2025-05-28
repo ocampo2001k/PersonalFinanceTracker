@@ -25,13 +25,14 @@ private:
     void RefreshSummary();
     void ClearInputFields();
     void PopulateInputFields(const Transaction& transaction);
+    void ShowNotification(const wxString& message, bool isSuccess = true);
     
-    // Helper methods
+    // UI Creation methods
     void CreateMenuBar();
     void CreateControls();
-    void CreateTransactionList();
-    void CreateInputPanel();
-    void CreateSummaryPanel();
+    wxPanel* CreateSummaryPanel(wxWindow* parent);
+    wxPanel* CreateInputPanel(wxWindow* parent);
+    wxPanel* CreateListPanel(wxWindow* parent);
     
     // Member variables
     TransactionManager& manager_;

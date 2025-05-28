@@ -6,11 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find required packages
-find_package(wxWidgets REQUIRED COMPONENTS core base adv)
+find_package(wxWidgets CONFIG REQUIRED)
 find_package(SQLite3 REQUIRED)
-
-# Include wxWidgets
-include(${wxWidgets_USE_FILE})
 
 # Define source files
 set(SOURCES
@@ -34,14 +31,13 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 # Link libraries
 target_link_libraries(${PROJECT_NAME} 
-    ${wxWidgets_LIBRARIES}
+    wx::core wx::base wx::adv
     SQLite::SQLite3
 )
 
 # Include directories
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
-    ${wxWidgets_INCLUDE_DIRS}
 )
 
 # Compiler-specific options
